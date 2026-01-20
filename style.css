@@ -1,0 +1,10 @@
+#interval-notes {
+    font-weight: bold;
+    font-size: 150%;
+    margin: 12px 0;
+}
+
+#solution-control-panel label {
+    display: block;
+    margin: 8px 0;
+}

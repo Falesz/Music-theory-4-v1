@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Zeneelmélet 4 v1</title>
+</head>
+<body>
+    <h1>Zeneelmélet 4 v1</h1>
+    <div id="exercise-area">
+        <h2>Hangközök azonosítása</h2>
+        
+        <div id="solution-control-panel">
+            <fieldset>
+                <legend>Milyen hangközt alkot az alábbi 2 hang?</legend>
+                <p id="interval-notes"></p>
+                <label>
+                    <input type="radio" name="interval" value="minor-second"> Kis szekund
+                </label>
+                <label>
+                    <input type="radio" name="interval" value="major-second"> Nagy szekund
+                </label>
+                <label>
+                    <input type="radio" name="interval" value="minor-third"> Kis terc
+                </label>
+                <label>
+                    <input type="radio" name="interval" value="major-third"> Nagy terc
+                </label>
+                <label>
+                    <input type="radio" name="interval" value="perfect-fourth"> Tiszta kvárt
+                </label>
+                <label>
+                    <input type="radio" name="interval" value="augmented-fourth"> Bővített kvárt  / Szűkített kvint
+                </label>
+                <label>
+                    <input type="radio" name="interval" value="perfect-fifth"> Tiszta kvint
+                </label>
+                <label>
+                    <input type="radio" name="interval" value="minor-sixth"> Kis szext
+                </label>
+                <label>
+                    <input type="radio" name="interval" value="major-sixth"> Nagy szext
+                </label>
+                <label>
+                    <input type="radio" name="interval" value="minor-seventh"> Kis szeptim
+                </label>
+                <label>
+                    <input type="radio" name="interval" value="major-seventh"> Nagy szeptim
+                </label>
+                <button id="evaluate-button">Megoldás kiértékelése</button>
+                <p id="feedback-paragraph">Sok sikert!</p>
+            </fieldset>
+        </div>
+    </div>
+    <script src="Note.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

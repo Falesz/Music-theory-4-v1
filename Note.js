@@ -1,11 +1,11 @@
 const RootNotesEnum = {
+    A: 'A',
+    B: 'B',
     C: 'C',
     D: 'D',
     E: 'E',
     F: 'F',
-    G: 'G',
-    A: 'A',
-    B: 'B'
+    G: 'G'
 };
 
 const ModificationType = {
@@ -21,8 +21,8 @@ class Note {
         this.modifierCount = modifierCount;
     }
 
-    calculateInterval(first, second) {
-
+    getRootNoteIndex() {
+        return Object.keys(RootNotesEnum).indexOf(this.rootNote) + 1;
     }
 
     toString() {

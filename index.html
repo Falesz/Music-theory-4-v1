@@ -13,8 +13,11 @@
         
         <div id="solution-control-panel">
             <fieldset>
-                <legend>Milyen hangközt alkot az alábbi 2 hang?</legend>
+                <legend>Milyen hangközt alkot az alábbi 2 hang, ha a második hang mindig magasabb?</legend>
                 <p id="interval-notes"></p>
+                <label>
+                    <input type="radio" name="interval" value="perfect-unison"> Tiszta prím
+                </label>
                 <label>
                     <input type="radio" name="interval" value="minor-second"> Kis szekund
                 </label>
@@ -54,6 +57,7 @@
         </div>
     </div>
     <script src="Note.js"></script>
+    <script src="Interval.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

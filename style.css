@@ -1,3 +1,7 @@
+body {
+    background-color: lightgrey;
+}
+
 #interval-notes {
     font-weight: bold;
     font-size: 150%;

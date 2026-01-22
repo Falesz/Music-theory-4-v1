@@ -21,8 +21,17 @@ class Note {
         this.modifierCount = modifierCount;
     }
 
+    static createRandom(minRootInd = 0, maxRootInd = 6) {
+        if (minRootInd < 0 || minRootInd > 6) { throw "minRootInd in Note.createRandomBetween not between 0 and 6"; } 
+        if (maxRootInd < 0 || maxRootInd > 6) { throw "maxRootInd in Note.createRandomBetween not between 0 and 6"; } 
+
+        let rootInd = Math.floor(Math.random() * (maxRootInd - minRootInd + 1)) + minRootInd;
+
+        return new Note(RootNotesEnum[Object.keys(RootNotesEnum)[rootInd]], ModificationType.NONE, 0);
+    }
+
     getRootNoteIndex() {
-        return Object.keys(RootNotesEnum).indexOf(this.rootNote) + 1;
+        return Object.keys(RootNotesEnum).indexOf(this.rootNote);
     }
 
     toString() {

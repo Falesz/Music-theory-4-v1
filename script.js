@@ -4,13 +4,8 @@ const evaluateBtn = document.getElementById("evaluate-button");
 const feedbackParagraph = document.getElementById("feedback-paragraph");
 
 function generateExercise() {
-    let firstRootInd = Math.floor(Math.random() * Object.keys(RootNotesEnum).length);
-    if (firstRootInd > 0) { firstRootInd -= 1; }
-
-    let secondRootInd = Math.floor(Math.random() * (Object.keys(RootNotesEnum).length - firstRootInd)) + firstRootInd
-
-    let first = new Note(RootNotesEnum[Object.keys(RootNotesEnum)[firstRootInd]], ModificationType.NONE, 0);
-    let second = new Note(RootNotesEnum[Object.keys(RootNotesEnum)[secondRootInd]], ModificationType.NONE, 0);
+    let first = Note.createRandom();
+    let second = Note.createRandom(first.getRootNoteIndex());
 
     let interval = new Interval(first, second);
 

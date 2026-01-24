@@ -3,14 +3,15 @@ const intervalButtons = document.getElementsByName("interval");
 const evaluateBtn = document.getElementById("evaluate-button");
 const feedbackParagraph = document.getElementById("feedback-paragraph");
 
+let intervalPresented = null;
+
 function generateExercise() {
     let first = Note.createRandom();
     let second = Note.createRandom(first.getRootNoteIndex());
 
-    let interval = new Interval(first, second);
+    intervalPresented = new Interval(first, second);
 
-    intervalNotes.innerText = interval.toString();
-    interval.calculateInterval();
+    intervalNotes.innerText = intervalPresented.toString();
 }
 
 function getSelectedInterval() {
@@ -23,7 +24,7 @@ function getSelectedInterval() {
 
 function evaluateSolution() {
     try {
-        return getSelectedInterval() == "perfect-fifth";
+        return getSelectedInterval().toUpperCase().replace("-", "_") === intervalPresented.calculateInterval();
     }
     catch (err) {
         return false;
@@ -31,12 +32,13 @@ function evaluateSolution() {
 }
 
 evaluateBtn.addEventListener("click", () => {
+    let success = evaluateSolution();
     feedbackParagraph.innerText =
-        evaluateSolution() ?
+        success ?
         "Helyes megoldás! :D" :
         "Helytelen megoldás. :(";
     
-    generateExercise();
+    if (success) { generateExercise(); }
 });
 
 generateExercise();

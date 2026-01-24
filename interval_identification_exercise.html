@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Zeneelmélet 4 v1</title>
+</head>
+<body>
+    <div id="content">
+        <h1>Zeneelmélet 4 v1</h1>
+        <div id="exercise-area">
+            <h2>Hangközök azonosítása</h2>
+            <div id="solution-control-panel">
+                <fieldset>
+                    <legend>Milyen hangközt alkot az alábbi 2 hang, ha a második hang mindig magasabb?</legend>
+                    <p id="interval-notes"></p>
+                    <label>
+                        <input type="radio" name="interval" value="diminished-unison"> Szűkített prím
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="perfect-unison"> Tiszta prím
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="augmented-unison"> Bővített prím
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="diminished-second"> Szűkített szekund
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="minor-second"> Kis szekund
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="major-second"> Nagy szekund
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="augmented-second"> Bővített szekund
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="diminished-third"> Szűkített terc
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="minor-third"> Kis terc
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="major-third"> Nagy terc
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="augmented-third"> Bővített terc
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="diminished-fourth"> Szűkített kvárt
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="perfect-fourth"> Tiszta kvárt
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="augmented-fourth"> Bővített kvárt  / Szűkített kvint
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="perfect-fifth"> Tiszta kvint
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="augmented-fifth"> Bővített kvárt
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="diminished-sixth"> Szűkített szext
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="minor-sixth"> Kis szext
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="major-sixth"> Nagy szext
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="augmented-sixth"> Bővített szext
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="diminished-seventh"> Szűkített szeptim
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="minor-seventh"> Kis szeptim
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="major-seventh"> Nagy szeptim
+                    </label>
+                    <label>
+                        <input type="radio" name="interval" value="augmented-seventh"> Bővített szeptim
+                    </label>
+                    <button id="evaluate-button">Megoldás kiértékelése</button>
+                    <p id="feedback-paragraph">Sok sikert!</p>
+                </fieldset>
+            </div>
+        </div>
+
+        <footer>
+            <p>💖 Hernyák Kati, a legszuperebb zeneelmélet tanár | 💖 Gerely Viktor, a legszuperebb Webprog tanár |
+                ⌛ 2026 | 🛠 Zeneelméleti és szoftveres hibák a jnjwrg@inf.elte.hu címen jelezhetőek
+            </p>
+        </footer>
+    </div>
+
+    <nav id="navigation-sidebar">
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="interval_identification_exercise.html">Hangközök azonosítása</a></li>
+            <li><a href="dictionary.html">Szótár</a></li>
+        </ul>
+    </nav>
+
+    <script src="Note.js"></script>
+    <script src="Interval.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

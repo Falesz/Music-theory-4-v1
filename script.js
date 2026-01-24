@@ -3,31 +3,45 @@ const intervalButtons = document.getElementsByName("interval");
 const evaluateBtn = document.getElementById("evaluate-button");
 const feedbackParagraph = document.getElementById("feedback-paragraph");
 
+let intervalPresented = null;
+
 function generateExercise() {
-    let firstRootInd = Math.floor(Math.random() * Object.keys(RootNotesEnum).length);
-    if (firstRootInd > 0) { firstRootInd -= 1; }
+    let first = Note.createRandom();
+    let second = Note.createRandom(
+        first.modificationType !== ModificationType.NONE ? 0 : 2,
+        first.getRootNoteIndex()
+    );
 
-    let secondRootInd = Math.floor(Math.random() * (Object.keys(RootNotesEnum).length - firstRootInd + 1)) + firstRootInd
+    intervalPresented = new Interval(first, second);
 
-    let first = new Note(RootNotesEnum[Object.keys(RootNotesEnum)[firstRootInd]], ModificationType.NONE, 0);
-    let second = new Note(RootNotesEnum[Object.keys(RootNotesEnum)[secondRootInd]], ModificationType.NONE, 0);
-    intervalNotes.innerText =
-        first.toString() + " - " + second.toString();
+    intervalNotes.innerText = intervalPresented.toString();
 }
 
 function getSelectedInterval() {
-    return Array.from(intervalButtons).find(radio => radio.checked).value;
+    let selected = Array.from(intervalButtons).find(radio => radio.checked);
+    if (selected) { return selected.value; }
+    else {
+        throw "No interval selected";
+    }
 }
 
 function evaluateSolution() {
-    return getSelectedInterval() == "perfect-fifth";
+    try {
+        return getSelectedInterval().toUpperCase().replace("-", "_") === intervalPresented.calculateInterval();
+    }
+    catch (err) {
+        return false;
+    }
 }
 
 evaluateBtn.addEventListener("click", () => {
+    let success = evaluateSolution();
     feedbackParagraph.innerText =
-        evaluateSolution() ?
+        success ?
         "Helyes megoldás! :D" :
         "Helytelen megoldás. :(";
+    
+    if (success) { generateExercise(); }
 });
 
 generateExercise();

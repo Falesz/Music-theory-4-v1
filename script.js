@@ -7,7 +7,10 @@ let intervalPresented = null;
 
 function generateExercise() {
     let first = Note.createRandom();
-    let second = Note.createRandom(first.getRootNoteIndex());
+    let second = Note.createRandom(
+        first.modificationType !== ModificationType.NONE ? 0 : 2,
+        first.getRootNoteIndex()
+    );
 
     intervalPresented = new Interval(first, second);
 

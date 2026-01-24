@@ -36,8 +36,10 @@ class Note {
 
     toString() {
         let noteStr = this.rootNote;
-        for (let i = 0; i < this.modifierCount; ++i) {
-            noteStr += this.modificationType == "SHARP" ? "#" : "b";
+        if (this.modificationType != ModificationType.NONE) {
+            for (let i = 0; i < this.modifierCount; ++i) {
+                noteStr += this.modificationType == "SHARP" ? "#" : "b";
+            }
         }
         return noteStr;
     }

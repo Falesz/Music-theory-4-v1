@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,53 +7,28 @@
     <title>Zeneelmélet 4 v1</title>
 </head>
 <body>
-    <h1>Zeneelmélet 4 v1</h1>
-    <div id="exercise-area">
-        <h2>Hangközök azonosítása</h2>
-        
-        <div id="solution-control-panel">
-            <fieldset>
-                <legend>Milyen hangközt alkot az alábbi 2 hang?</legend>
-                <p id="interval-notes"></p>
-                <label>
-                    <input type="radio" name="interval" value="minor-second"> Kis szekund
-                </label>
-                <label>
-                    <input type="radio" name="interval" value="major-second"> Nagy szekund
-                </label>
-                <label>
-                    <input type="radio" name="interval" value="minor-third"> Kis terc
-                </label>
-                <label>
-                    <input type="radio" name="interval" value="major-third"> Nagy terc
-                </label>
-                <label>
-                    <input type="radio" name="interval" value="perfect-fourth"> Tiszta kvárt
-                </label>
-                <label>
-                    <input type="radio" name="interval" value="augmented-fourth"> Bővített kvárt  / Szűkített kvint
-                </label>
-                <label>
-                    <input type="radio" name="interval" value="perfect-fifth"> Tiszta kvint
-                </label>
-                <label>
-                    <input type="radio" name="interval" value="minor-sixth"> Kis szext
-                </label>
-                <label>
-                    <input type="radio" name="interval" value="major-sixth"> Nagy szext
-                </label>
-                <label>
-                    <input type="radio" name="interval" value="minor-seventh"> Kis szeptim
-                </label>
-                <label>
-                    <input type="radio" name="interval" value="major-seventh"> Nagy szeptim
-                </label>
-                <button id="evaluate-button">Megoldás kiértékelése</button>
-                <p id="feedback-paragraph">Sok sikert!</p>
-            </fieldset>
-        </div>
+    <div id="content">
+        <h1>Zeneelmélet 4 v1</h1>
+        <h2>Az oldalról</h2>
+        <p>Az oldal a 2025 őszén indult 4. Hernyák Kati indította Zeneelmélet kurzus anyagának gyakorlásához készült.
+            A leprogramozott zeneelméleti feladatok az órai feladatok alapján készültek. A weboldal célja az, hogy könnyedén és azonnali visszajelzéssel
+            lehessen feladatokat gyakorolni, hiszen sokunknak nehezére eshet a rendszeres heti gyakorlás 
+            a túltelített naptárainkra vetett szomorú pillantásaink közepette.
+        </p>
+
+        <footer>
+            <p>💖 Hernyák Kati, a legszuperebb zeneelmélet tanár | 💖 Gerely Viktor, a legszuperebb Webprog tanár |
+                ⌛ 2026 | 🛠 Zeneelméleti és szoftveres hibák a jnjwrg@inf.elte.hu címen jelezhetőek
+            </p>
+        </footer>
     </div>
-    <script src="Note.js"></script>
-    <script src="script.js"></script>
+
+    <nav id="navigation-sidebar">
+        <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="interval_identification_exercise.html">Hangközök azonosítása</a></li>
+            <li><a href="dictionary.html">Szótár</a></li>
+        </ul>
+    </nav>
 </body>
 </html>

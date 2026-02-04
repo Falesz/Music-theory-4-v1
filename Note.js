@@ -21,7 +21,7 @@ class Note {
         this.modifierCount = modifierCount;
     }
 
-    static createRandom(maxModifierCount = 2, minRootInd = 0, maxRootInd = 6) {
+    static createRandom(maxModifierCount = 1, minRootInd = 0, maxRootInd = 6) {
         if (minRootInd < 0 || minRootInd > 6) { throw "minRootInd in Note.createRandomBetween not between 0 and 6"; } 
         if (maxRootInd < 0 || maxRootInd > 6) { throw "maxRootInd in Note.createRandomBetween not between 0 and 6"; } 
 

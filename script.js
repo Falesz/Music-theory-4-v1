@@ -8,7 +8,7 @@ let intervalPresented = null;
 function generateExercise() {
     let first = Note.createRandom();
     let second = Note.createRandom(
-        first.modificationType !== ModificationType.NONE ? 0 : 2,
+        first.modificationType !== ModificationType.NONE ? 0 : 1,
         first.getRootNoteIndex()
     );
 

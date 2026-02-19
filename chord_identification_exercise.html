@@ -9,12 +9,18 @@
 <body>
     <div id="content">
         <h1>Zeneelmélet 4 v1</h1>
-        <h2>Az oldalról</h2>
-        <p>Az oldal a 2025 őszén indult 4. Hernyák Kati indította Zeneelmélet kurzus anyagának gyakorlásához készült.
-            A leprogramozott zeneelméleti feladatok az órai feladatok alapján készültek. A weboldal célja az, hogy könnyedén és azonnali visszajelzéssel
-            lehessen feladatokat gyakorolni, hiszen sokunknak nehezére eshet a rendszeres heti gyakorlás 
-            a túltelített naptárainkra vetett szomorú pillantásaink közepette.
-        </p>
+        <div id="exercise-area">
+            <h2>Hármashangzatok azonosítása</h2>
+            <div id="solution-control-panel">
+                <fieldset>
+                    <legend>Milyen hármashangzatot alkot az alábbi 3 hang?</legend>
+                    <p id="interval-notes"></p>
+                    
+                    <button id="evaluate-button">Megoldás kiértékelése</button>
+                    <p id="feedback-paragraph">Sok sikert!</p>
+                </fieldset>
+            </div>
+        </div>
 
         <footer>
             <p>💖 Hernyák Kati, a legszuperebb zeneelmélet tanár | 💖 Gerely Viktor, a legszuperebb Webprog tanár |
@@ -31,5 +37,8 @@
             <li><a href="dictionary.html">Szótár</a></li>
         </ul>
     </nav>
+
+    <script src="note.js"></script>
+    <script src="interval.js"></script>
 </body>
 </html>

@@ -14,7 +14,26 @@
             <div id="solution-control-panel">
                 <fieldset>
                     <legend>Milyen hármashangzatot alkot az alábbi 3 hang?</legend>
-                    <p id="interval-notes"></p>
+                    <p id="chord-notes"></p>
+
+                    <div id="chord-solution-components">
+                        <div class="radio-group">
+                            <label><input type="radio" name="chord-root-note" value="A"> A</label>
+                            <label><input type="radio" name="chord-root-note" value="B"> B</label>
+                            <label><input type="radio" name="chord-root-note" value="C"> C</label>
+                            <label><input type="radio" name="chord-root-note" value="D"> D</label>
+                            <label><input type="radio" name="chord-root-note" value="E"> E</label>
+                            <label><input type="radio" name="chord-root-note" value="F"> F</label>
+                            <label><input type="radio" name="chord-root-note" value="G"> G</label>
+                        </div>
+
+                        <div class="radio-group">
+                            <label><input type="radio" name="chord-range" value="diminished"> Szűkített</label>
+                            <label><input type="radio" name="chord-range" value="minor"> Moll</label>
+                            <label><input type="radio" name="chord-range" value="major"> Dúr</label>
+                            <label><input type="radio" name="chord-range" value="augmented"> Bővített</label>
+                        </div>
+                    </div>
                     
                     <button id="evaluate-button">Megoldás kiértékelése</button>
                     <p id="feedback-paragraph">Sok sikert!</p>
@@ -40,5 +59,7 @@
 
     <script src="note.js"></script>
     <script src="interval.js"></script>
+    <script src="chord.js"></script>
+    <script src="chord_identification_script.js"></script>
 </body>
 </html>

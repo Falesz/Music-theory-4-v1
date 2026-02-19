@@ -46,3 +46,14 @@ table tbody td {
     border: 1px solid black;
     font-weight: bold;
 }
+
+#chord-solution-components {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+}

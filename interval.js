@@ -126,6 +126,11 @@ class Interval {
         }
     }
 
+    static calculateInterval(note1, note2) {
+        const interval = new Interval(note1, note2);
+        return interval.calculateInterval();
+    }
+
     toString() {
         return this.note1.toString() + " - " + this.note2.toString();
     }
